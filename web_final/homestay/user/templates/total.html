@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static%}
+{% block content%}
+
+    <style>
+        .card-body a{
+        text-decoration:none;
+        color:#fff;
+        }
+        .card-body a:hover{
+        color:orange;
+        }
+    </style>
+    <div class="container mt-4">
+        <h1 class="text-center">Dashboard</h1>
+        <div class="row">
+            <div class="col">
+        <div class="card text-white bg-primary mb-3" style="max-width: 35rem;">
+            <h3 class="card-header text-center">Total Users</h3>
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ user }}</h5>
+            </div>
+        </div>
+            </div>
+            <div class="col">
+                <div class="card text-white bg-warning mb-3" style="max-width: 35rem;">
+                    <h3 class="card-header text-center">Total Homestays.</h3>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ rooms }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card text-white bg-success mb-3" style="max-width: 35rem;">
+                    <h3 class="card-header text-center">Total Bookings.</h3>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ reserve }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-white bg-danger mb-3" style="max-width: 35rem;">
+                    <h3 class="card-header text-center">Total Admins</h3>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ admin }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+{% endblock content %}

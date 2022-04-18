@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container col-md-7 card mt-3 left top bg-light shadow-lg mb-4">
+
+        <div class="container text-center mt-lg-5">
+            <form method="POST" enctype="multipart/form-data">
+                    <h1 class="text-danger">Are you sure you want to delete,</h1>
+                    <h5>Booking in the name of  <span class="text-success text-capitalize"><b><a href="{% url 'get_Reserve' %}" style="text-decoration: none">
+                                {{ reserve.name }} </a></b></span>?</h5>
+                    {% csrf_token %}
+            <button class="btn btn-danger mb-4" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock content %}
+

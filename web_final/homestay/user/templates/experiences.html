@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Experiences</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .first {
+        background-color: gainsboro !important;
+        width: 100%;
+    }
+    .first-part {
+        margin-top: 80px;
+    }
+    .images{
+        border-radius: 15px;
+        height: 200px;
+    }
+    /*img:hover{*/
+    /*    filter: brightness(70%);*/
+    /*    transition: .5s;*/
+    /*}*/
+    .icons{
+        width: 80%;
+        height: 45px;
+        filter: brightness(0%);
+    }
+    .icons:hover{
+        filter: brightness(100%);
+        transition: .2s;
+    }
+
+
+
+</style>
+
+    <!DOCTYPE html>
+        <html>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+        </style>
+        <body class="w3-light-grey">
+
+        <div class="w3-content" style="max-width:1400px">
+
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-32">
+          <h1><b style="color: orange; font-family:Comic Sans MS" class="heading">SOME THINGS TOLD BY OUR GUESTS</b></h1>
+          <p>Welcome to the blog of <span class="w3-tag">NEP STAY</span></p>
+        </header>
+
+        <!-- Grid -->
+        <div class="w3-row">
+
+        <!-- Blog entries -->
+        <div class="w3-col l8 s12">
+          <!-- Blog entry -->
+          <div class="w3-card-4 w3-margin w3-white">
+            <img src="{% static 'images/insta-3.jpg' %}" alt="Nature" style="width:100%">
+
+            <div class="w3-container w3-white">
+              <h4><b>Kaira Jain</b></h4>
+                <h5><span class="w3-opacity">April 7, 2014</span></h5>
+              <p> I personally experienced Nepalese cultures, norms, beliefs and
+                 lifestyle. Most enjoying part is agriculture. March-April is the
+                    season of paddy here. It's so fun to take a part in this occasion.
+                    I'll surely try this at my home if I'll ever get a chance. Really
+                  like visiting a family at the same time as the room was clean, nice
+                  and of hotel standard. An extra plus was the excellent food that Babu’s
+                  wife Belko cooked. I can highly recommend this stay.</p> <br>
+            </div>
+          </div>
+          <hr>
+
+          <!-- Blog entry -->
+          <div class="w3-card-4 w3-margin w3-white">
+          <img src="{% static 'images/insta-4.jpg' %}" alt="Norway" style="width:100%">
+
+            <div class="w3-container w3-white">
+              <h4><b>Robin Williams.</b></h4>
+                <h5><span class="w3-opacity">April 7, 2014</span></h5>
+              <p>The behaviour of peoples here are extraordinary. We were treated as gods.
+               They have a slogan which says, <i>Attithi Debo bhawa (अतिथिदेवो भव:)</i> which says
+                    guests are equivalent to gods. Their this habit impressed me totally. They everytime
+                  bow their head saying 'Namaskar'. This is truly amazing experiencs.
+                    <br><br>
+                    <b>
+                    </b>
+            </div>
+          </div>
+        <!-- END BLOG ENTRIES -->
+        </div>
+
+        <!-- Introduction menu -->
+        <div class="w3-col l4">
+          <div class="w3-card w3-margin w3-margin-top">
+          <img src="{% static 'images/c1.jpeg' %}" style="width:100%">
+            <div class="w3-container w3-white">
+              <h4><b>Sarah Hascelschwardt.</b></h4>
+                <h5><span class="w3-opacity">April 7, 2014</span></h5>
+              <p>My husband and I loved our time at Nep-Stay
+                   It gave us a glimpse into life in rural Nepal
+                    and allowed us to experience the culture in a
+                    meaningful way while building real relationships
+                    with community members.</b>
+            </div>
+          </div>
+
+          <div class="w3-card w3-margin w3-margin-top">
+          <img src="{% static 'images/insta-2.jpg' %}" style="width:100%">
+            <div class="w3-container w3-white">
+              <h4><b>Edward Jones.</b></h4>
+                <h5><span class="w3-opacity">April 7, 2014</span></h5>
+              <p>Nep-Stay not only facilitated us on our trip, but also
+                    behaved as a family. Nepalese are great at worshipping
+                   visitors. They never gave  feeling that we are staying on
+                  someone other's property.I want to share my world with you.</p>
+            </div>
+          </div><hr>
+
+
+          <div class="w3-card w3-margin w3-margin-top">
+          <img src="{% static 'images/ne.jpg' %}" style="width:100%">
+            <div class="w3-container w3-white">
+              <h4><b>Sophia.</b></h4>
+                <h5><span class="w3-opacity">April 7, 2014</span></h5>
+              <p>Brilliant organisation. Chance to meet different peoples
+                  from different countries, different culture,with different
+                  point of view. It's a learning point to know how young minds works.</p>
+            </div>
+          </div><hr>
+
+        </div>
+
+        <!-- END GRID -->
+        </div><br>
+
+        <!-- END w3-content -->
+        </div>
+        <div class="container-fluid" style="text-align: center">
+            <div class="container" style="text-align: center;">
+                    <h2 style="color: orange; font-family:Comic Sans MS"> Affiliated and Recognized by </h2>
+            </div>
+            <br>
+            <div class="row">
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/b.png' %}" class="icons img-fluid"></a>
+            </span>
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/boo.png' %}" class="icons img-fluid"></a>
+            </span>
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/f.png' %}" class="icons img-fluid"></a>
+            </span>
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/ab.png' %}" class="icons img-fluid"></a>
+            </span>
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/e.png' %}" class="icons img-fluid"></a>
+            </span>
+            <span class="col-md-2">
+                <a href="#"><img src="{% static 'images/i.png' %}" class="icons img-fluid"></a>
+            </span>
+        </div>
+    </div>
+        <br> <br>
+
+</body>
+</html>
+
+
+
+
+
+<!--<div class="container bg-light ">-->
+<!--    <div style="text-align: center; font-size: 30px">-->
+<!--        As <span style="color: orange">Seen in</span>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="row">-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/b.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/boo.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/f.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/ab.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/e.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--        <span class="col-md-2">-->
+<!--            <a href="#"><img src="{% static 'images/i.png' %}" class="icons"></a>-->
+<!--        </span>-->
+<!--    </div>-->
+
+<!--<div class="container-fluid bg-light">-->
+<!--<div class="container mt-lg-5">-->
+<!--    <div class="row">-->
+<!--        <span class="col-md-6 first-part">-->
+<!--            <img src="{% static 'images/insta-2.jpg' %}" class="img-fluid shadow images last-image">-->
+<!--        </span>-->
+<!--        <span class="col-md-6 first-part">-->
+<!--             <i class="fas fa-quote-left"> </i><br><br>-->
+<!--                    Nep-Stay not only facilitated us on our trip, but also-->
+<!--                    behaved as a family. Nepalese are great at worshipping-->
+<!--                    visitors. They never gave  feeling that we are staying on-->
+<!--                    someone other's property.-->
+<!--                    <br><br>-->
+<!--                    <b> Edward Jones.</b>-->
+<!--        </span>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="container first-part">-->
+<!--    <div class="row ">-->
+<!--        <span class="col-md-6">-->
+<!--             <i class="fas fa-quote-left"> </i><br><br>-->
+<!--                    My husband and I loved our time at Nep-Stay!-->
+<!--                    It gave us a glimpse into life in rural Nepal-->
+<!--                    and allowed us to experience the culture in a-->
+<!--                    meaningful way while building real relationships-->
+<!--                    with community members.<br><br>-->
+<!--                    <b> Sarah Hascelschwardt. </b>-->
+<!--        </span>-->
+
+<!--        <span class="col-md-6">-->
+<!--            <img src="{% static 'images/c1.jpeg' %}" class="img-fluid shadow images" >-->
+<!--        </span>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="container first-part">-->
+<!--    <div class="row ">-->
+<!--        <span class="col-md-6">-->
+<!--            <img src="{% static 'images/insta-3.jpg' %}" class="img-fluid shadow images" >-->
+<!--        </span>-->
+<!--        <span class="col-md-6">-->
+<!--             <i class="fas fa-quote-left"> </i><br><br>-->
+<!--                    I personally experienced Nepalese cultures, norms, beliefs and-->
+<!--                    lifestyle. Most enjoying part is agriculture. March-April is the-->
+<!--                    season of paddy here. It's so fun to take a part in this occasion.-->
+<!--                    I'll surely try this at my home if I'll ever get a chance. <br><br>-->
+
+<!--                    <b> Kaira Jain </b>-->
+<!--        </span>-->
+
+
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div class="container first-part">-->
+<!--    <div class="row ">-->
+<!--        <span class="col-md-6">-->
+<!--             <i class="fas fa-quote-left"> </i><br><br>-->
+<!--                    The behaviour of peoples here are extraordinary. We were treated as gods.-->
+<!--                    They have a slogan which says, <i>Attithi Debo bhawa (अतिथिदेवो भव:)</i> which says-->
+<!--                    guests are equivalent to gods. Their this habit impressed me totally. They everytime-->
+<!--                    bow their head saying 'Namaskar'. This is truly amazing experiencs.-->
+<!--                    <br><br>-->
+<!--                    <b> Robin Williams. </b>-->
+<!--        </span>-->
+
+<!--        <span class="col-md-6">-->
+<!--            <img src="{% static 'images/insta-4.jpg' %}" class="img-fluid shadow images" >-->
+<!--        </span>-->
+<!--    </div>-->
+<!--</div>-->
+
+</div>
+
+{% endblock %}
+</div>

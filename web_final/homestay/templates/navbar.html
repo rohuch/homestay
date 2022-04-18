@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Nep Stay</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">NEP STAY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+
+          <div class="dropdown bg-dark mr-auto text-justify">
+            <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    style="border: 1px solid gray;">
+            </button>
+            <div class="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton" style="padding: 20px">
+              {% if user.is_authenticated %}
+                <li>
+                  <p style="color: white; font-weight: normal">   <span class="fas fa-user" style="color: green "></span>
+                    <span class="text-success">&nbsp  Hi {{ user.username }}!</span></p>
+                </li>
+                <li  class="nav-item btns">
+                  <a class="nav-link text-danger" href="{% url 'logout' %}">Log Out</a>
+                </li>
+                <li  class="nav-item btns">
+                    <a class="nav-link text-warning" href="{% url 'password_change' %}">Change Password</a>
+                  </li>
+            {% else %}
+              <li  class="nav-item btns">
+                <a class="nav-link text-dark" href="{% url 'login' %}">Sign-in</a>
+              </li>
+              <li  class="nav-item btns">
+                  <a class="nav-link text-dark" href="{% url 'signup' %}">Sign-up</a>
+              </li>
+              <li  class="nav-item btns">
+                  <a class="nav-link text-dark" href="{% url 'password_reset' %}">Reset Password</a>
+              </li>
+            {% endif %}
+            {% if user.is_staff %}
+                <a class="nav-link text-primary" href="{% url 'adminworks' %}" style="padding: 30px">To Do!</a>
+            {% endif %}
+          </div>
+
+        </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+</body>
+
+</html>

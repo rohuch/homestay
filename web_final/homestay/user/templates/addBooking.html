@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<style>
+        .bou-image{
+            z-index: -2;
+            height: 120vh;
+            width: 100%;
+            position: absolute;
+            filter: brightness(20%);
+        }
+</style>
+
+ <img src="{% static 'images/bou.jpg' %}" class="bou-image" alt="">
+<div class="container">
+<div class="container col-md-7 card mb-4 mt-3 left top bg-light shadow-lg">
+    <h1>Add Rooms.</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success"> Submit </button>
+    </form>
+</div>
+</div>
+
+
+{% endblock content %}

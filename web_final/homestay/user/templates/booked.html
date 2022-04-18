@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+
+{% endblock%}
+
+{% block content%}
+
+
+    <section class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-5">Contact Form</h2>
+                    <form class="" method="POST">
+                        {% csrf_token %}
+                          <div class="form-group">
+        <label for="name">Your Name</label>
+        <input name="name" type="text"  id="name" class="form-control" placeholder="Name">
+        <small id="" class="form-text text-muted">Your name should be remeber by our teams</small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1"  placeholder="Email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="messages">Room Type</label>
+        <input name="room type" type="text" class="form-control" id="messages" placeholder="Room type">
+      </div>
+      <div class="form-group">
+        <label for="number">Number of peoples</label>
+        <input name="number" type="number" class="form-control" id="number" placeholder="Total number of visitors">
+      </div>
+      <div class="form-group">
+        <input type="radio" id="esewa" name="gender" value="male">
+        <label for="esewa">Esewa</label><br>
+        <input type="radio" id="bank" name="gender" value="female">
+        <label for="bank">Bank Payment</label><br>
+        <input type="radio" id="cash" name="gender" value="other">
+        <label for="cash">Cash</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    </div>
+                {% endblock %}
+            </div>
+        </div>
+    </section>

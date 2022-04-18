@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+{% endblock%}
+
+{% block content%}
+
+<style>
+  #myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100% !important;
+    pointer-events: none;
+    z-index: -2;
+    filter: brightness(90%);
+  }
+  .top{
+    opacity: 0.7;
+  }
+
+</style>
+
+  <!-- Page Content -->
+  <video autoplay muted loop id="myVideo" >
+    <source src="{% static 'video/h13.mp4' %}" type="video/mp4">
+  </video>
+  <div class="container">
+
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron top my-1">
+      <h1 class="display-5">A Warm Welcome!</h1>
+      <h4 class="lead">We maximize your vacation experience the right way.</h3>
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center top">
+
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{% static 'images/booking.png' %}" style="height: 200px"  alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title" >Booking</h4>
+            <p class="card-text">Come, stay and enjoy your day.</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'booking' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{% static 'images/experience.png' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Experience</h4>
+            <p class="card-text">Learn further in detail about us.</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'experiences' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{% static 'images/impactttt.png' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">Impact</h4>
+            <p class="card-text">How your engagement affects us.</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'impact' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top img-fluid" src="{% static 'images/about.jpg' %}" style="height: 200px" alt="">
+          <div class="card-body" style="background-color: lightgrey">
+            <h4 class="card-title">About us</h4>
+            <p class="card-text">Who are we?</p>
+          </div>
+          <div class="card-footer" style="background-color: lightgrey">
+            <a href="{% url 'about' %}" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{%endblock%}

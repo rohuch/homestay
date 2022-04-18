@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+
+<style>
+        .bou-image{
+            z-index: -2;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            filter: brightness(20%);
+        }
+</style>
+
+<img src="{% static 'images/w1.jpg' %}" class="bou-image" >
+
+<div class="container mt-lg-5 text-white">
+        <h2>Room Name : <span style="color: orange; font-family: 'Comic Sans MS'">{{ object.name }}</span></h2>
+        <h2>Room Price : <span style="color: orange; font-family: 'Comic Sans MS'"> $ {{ object.price }}</span></h2>
+</div>
+
+<div class="container text-center mt-lg-5">
+    <div class="row ">
+        <span class="col-md-6">
+            <h3>House</h3>
+            <p><img src="{{ room.image_URL }}" class="img img-fluid" style="width: 100%;border: 2px solid white; border-radius: 10px; height: 35vh"></p>
+        </span>
+         <span class="col-md-6">
+             <h3>Room</h3>
+            <p><img src="{{ room.image2_URL }}" class="img img-fluid" style="width: 100%;border: 2px solid white; border-radius: 10px; height: 35vh"></p>
+        </span>
+    </div>
+</div>
+    <div class="container  text-center">
+         {% if user.is_staff %}
+            <a href="{% url 'update' room.pk %}"><button class="btn btn-success mr-5"> Update </button></a>
+            <a href="{% url 'delete' room.pk %}"><button class="btn btn-success"> Delete </button></a>
+        {% endif %}
+    </div>
+ <br>
+{% endblock content %}

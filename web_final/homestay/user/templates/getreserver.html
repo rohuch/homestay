@@ -1,0 +1,29 @@
+<title>Reserve</title>
+{% endblock %}
+{% block content %}
+<div class="card p-2 shadow-lg">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>room</th>
+            <th>number</th>
+            <th>date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for reserve in reserves %}
+        <tr>
+            <td>{{reserve.name}}</td>
+            <td>{{reserve.email}}</td>
+            <td>{{reserve.room}}</td>
+            <td>{{reserve.number}}</td>
+            <td>{{reserve.date}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br><br><br>
+{% endblock %}

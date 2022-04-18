@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Login</title>
+{% endblock %}
+
+{% block content %}
+<!--<div class="container-fluid"></div>-->
+<!--    <h2>Create Account</h2>-->
+<!--    <form method="post">-->
+<!--    {% csrf_token %}-->
+<!--    {{ form|crispy }}-->
+<!--    <button type="submit">Sign up</button>-->
+<!--    </form>-->
+
+<div class="container mt-lg-5">
+        <div class="col-md-10 card mb-4 mt-3 left top bg-light shadow-lg mb-lg-5">
+            <h1>Create an Account.</h1>
+            <form method="post"  style="margin-top: 10px;">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+
+                <button type="submit" class="btn bg-success text-center pl-5 pr-5 text-white">Log In</button>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

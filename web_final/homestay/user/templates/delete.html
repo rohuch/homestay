@@ -1,0 +1,30 @@
+
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+    <div class="container col-md-7 card mb-4 mt-3 left top bg-light shadow-lg">
+
+        <div class="container text-center mt-lg-5">
+            <form method="POST" enctype="multipart/form-data">
+                    <h1 class="text-danger">Are you sure you want to delete?</h1>
+                    <h5> Name: <span class="text-success"><b>{{ room.name }}</b></span></h5>
+            <div class="row">
+                <span class="col-md-6 shadow-lg ">
+                    <h3>House</h3>
+                    <p><img src="{{ room.image_URL }}" style="width: 100%;border: 2px solid white; border-radius: 10px; height: 35vh"></p>
+                </span>
+                 <span class="col-md-6 shadow-lg">
+                     <h3>Room</h3>
+                    <p><img src="{{ room.image2_URL }}" style="width: 100%;border: 2px solid white; border-radius: 10px; height: 35vh"></p>
+                </span>
+                {% csrf_token %}
+                <br><button class="btn btn-danger mt-3 mb-3" type="submit">Delete</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+

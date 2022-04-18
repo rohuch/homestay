@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>Reserve</title>
+{% endblock %}
+{% block content %}
+
+<style>
+    .fif{
+        position: absolute;
+        filter: brightness(40%);
+        height: 80vh;
+        width: 100%;
+    }
+</style>
+
+<img src="{% static 'images/w5.jpg' %}" class="fif" alt="">
+
+
+
+<div class="container card p-2 shadow-lg" style="margin-top:100px">
+    <table class="table table-striped table-hover">
+        <h1 class="text-center">View Booking lists.</h1>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Roomcode</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for reserve in reserves %}
+        <tr>
+            <td>{{reserve.name}}</td>
+            <td>{{reserve.email}}</td>
+            <td>{{reserve.date}}</td>
+            <td>{{reserve.roomcode}}</td>
+            <td><a href="{% url 'delete_user' reserve.pk %}"> <button class="btn btn-danger">Delete</button></a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<br><br><br><br>
+{% endblock %}

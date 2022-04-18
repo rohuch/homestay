@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static%}
+{% block content%}
+
+
+
+<style>
+        .bou-image{
+            z-index: -2;
+            height: 130vh;
+            width: 100%;
+            position: absolute;
+            filter: brightness(40%);
+        }
+</style>
+
+ <img src="{% static 'images/w4.jpg' %}" class="bou-image" alt="">
+
+
+
+
+<div class="container">
+    <div class="col-md-8 card mb-4 mt-3  top bg-light shadow-lg">
+        <h2>Update Bookings.</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                    <div class="col-md-6">
+                        {{ form.name|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.price|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ room.image_URL }}" style="height: 100px; width: 150px">
+                            {{ form.image|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                            <img src="{{ room.image2_URL }}" style="height: 100px; width: 150px">
+                            {{ form.image2|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                            {{ form.text|as_crispy_field }}
+                    </div>
+                </div>
+            <button class="btn btn-primary" type="submit"> Update </button>
+        </form>
+    </div>
+</div> <br>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<style>
+    .test {
+        display: grid;
+        /*grid-template-rows: repeat(2, 1fr);*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+</style>
+
+
+<div class="container">
+    <div class="container">
+        <h1 style="color: orange; font-family: Comic Sans MS; text-align: center">We give you a legendary welcome,
+            every time you come back.</h1>
+    </div>
+
+
+<div class="test">
+          {% for room in rooms %}
+            <div class="container">
+                             <img class="img-thumbnail img-fluid" src="{{ room.image_URL }}" style="height: 40vh; width: 80%">
+                               <img class="img-thumbnail img-fluid"  src="{{ room.image2_URL }}" style="height: 40vh; width: 80%">
+                            <div class="dabba prod">
+                                <h2><strong>{{ room.name }}</strong> <br> <h4>
+                                        ${{ room.price|floatformat:2 }}</h4></h2>
+                                <a class="btn btn-outline-primary" href="{% url 'reserve'%}">Book</a> &nbsp;
+                                <a class="btn btn-outline-success" href="{% url 'roomview' room.pk %}">View</a> <br>
+                                <hr>
+                                <br>
+                                <div class="">
+                                    <p class="text-justify"> {{ room.text }} </p>
+                                </div>
+                                <br><br> <br><br>
+                            </div>
+                </div>
+          {% endfor %}
+</div>
+</div>
+
+
+{% endblock content %}
